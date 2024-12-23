@@ -1,0 +1,396 @@
+{
+    "version": 1,
+    "author": "Planerful",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-arduino-nano",
+            "id": "nano",
+            "top": -160.67,
+            "left": 35.33,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-74hc595",
+            "id": "sr1",
+            "top": -25.47,
+            "left": -45.5,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-vcc",
+            "id": "vcc1",
+            "top": -124.17,
+            "left": -95.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-gnd",
+            "id": "gnd1",
+            "top": -15.33,
+            "left": 42.32,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led-bar-graph",
+            "id": "bargraph1",
+            "top": 41.39,
+            "left": 0.45,
+            "attrs": {
+                "color": "lime"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 39.69,
+            "left": 53.98,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r2",
+            "top": 51.01,
+            "left": 53.71,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r3",
+            "top": 62.33,
+            "left": 53.87,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r4",
+            "top": 72.36,
+            "left": 54.03,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r5",
+            "top": 82.82,
+            "left": 54.19,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r6",
+            "top": 94.14,
+            "left": 53.92,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r7",
+            "top": 104.17,
+            "left": 53.65,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r8",
+            "top": 115.49,
+            "left": 54.24,
+            "attrs": {
+                "value": "200"
+            }
+        },
+        {
+            "type": "wokwi-gnd",
+            "id": "gnd2",
+            "top": 137.09,
+            "left": 120.05,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "vcc1:VCC",
+            "sr1:VCC",
+            "red",
+            [
+                "v38.19",
+                "h40.17"
+            ]
+        ],
+        [
+            "sr1:DS",
+            "nano:2",
+            "green",
+            [
+                "v-200.41",
+                "h49.22"
+            ]
+        ],
+        [
+            "sr1:SHCP",
+            "nano:3",
+            "green",
+            [
+                "v-190.12",
+                "h129.82"
+            ]
+        ],
+        [
+            "sr1:STCP",
+            "nano:4",
+            "green",
+            [
+                "v-178.96",
+                "h127.41"
+            ]
+        ],
+        [
+            "sr1:OE",
+            "nano:GND.2",
+            "green",
+            [
+                "v-200.84",
+                "h179.05"
+            ]
+        ],
+        [
+            "bargraph1:A1",
+            "sr1:Q0",
+            "green",
+            [
+                "h-68.26",
+                "v-94.9",
+                "h29.6"
+            ]
+        ],
+        [
+            "bargraph1:A2",
+            "sr1:Q1",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "bargraph1:A3",
+            "sr1:Q2",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "bargraph1:A4",
+            "sr1:Q3",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "bargraph1:A5",
+            "sr1:Q4",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "bargraph1:A6",
+            "sr1:Q5",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "bargraph1:A7",
+            "sr1:Q6",
+            "green",
+            [
+                "h-56.25",
+                "v-80",
+                "h58.34"
+            ]
+        ],
+        [
+            "bargraph1:A8",
+            "sr1:Q7",
+            "green",
+            [
+                "h-62.68",
+                "v-98.18",
+                "h7.72"
+            ]
+        ],
+        [
+            "sr1:GND",
+            "gnd1:GND",
+            "black",
+            [
+                "v19.7",
+                "h11.09",
+                "v-54.05",
+                "h11.58"
+            ]
+        ],
+        [
+            "bargraph1:C1",
+            "r1:1",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "bargraph1:C2",
+            "r2:1",
+            "green",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "r3:1",
+            "bargraph1:C3",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r4:1",
+            "bargraph1:C4",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r5:1",
+            "bargraph1:C5",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r6:1",
+            "bargraph1:C6",
+            "green",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r7:1",
+            "bargraph1:C7",
+            "green",
+            [
+                "v-0.65",
+                "h-7.69",
+                "v-6.01"
+            ]
+        ],
+        [
+            "r8:1",
+            "bargraph1:C8",
+            "green",
+            [
+                "v-0.82",
+                "h-11.29",
+                "v-8.15"
+            ]
+        ],
+        [
+            "gnd2:GND",
+            "r8:2",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "r7:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v0.21",
+                "h16.3"
+            ]
+        ],
+        [
+            "r6:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v-0.49",
+                "h15.61"
+            ]
+        ],
+        [
+            "r5:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v0.11",
+                "h14.91"
+            ]
+        ],
+        [
+            "r4:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v0.27",
+                "h17.21"
+            ]
+        ],
+        [
+            "r3:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v-0.42",
+                "h16.94"
+            ]
+        ],
+        [
+            "r2:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v0.17",
+                "h15.82"
+            ]
+        ],
+        [
+            "r1:2",
+            "gnd2:GND",
+            "green",
+            [
+                "v0.34",
+                "h15.55"
+            ]
+        ]
+    ],
+    "dependencies": {},
+    "serialMonitor": {
+        "display": "always",
+        "newline": "lf",
+        "convertEol": false
+    }
+}
